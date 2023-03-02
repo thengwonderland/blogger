@@ -1,0 +1,47 @@
+.related-blog-card {
+  display: grid;
+  grid-template-rows: 19rem auto;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-rows: 15rem auto;
+  }
+
+  @media only screen and (max-width: 576px) {
+    grid-template-rows: 12rem auto;
+  }
+
+  &__wrapper {
+    padding: 1rem;
+    border: .1rem solid var(--mainGrey);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 1rem 0;
+    align-self: center;
+    font-family: "Nunito",
+      sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--darkGrey);
+  }
+
+  &__posted-by {
+    margin: 0;
+    padding: .5rem 0;
+    font-size: 1.6rem;
+    align-self: center;
+
+    span {
+      color: var(--primaryColor);
+    }
+  }
+}
