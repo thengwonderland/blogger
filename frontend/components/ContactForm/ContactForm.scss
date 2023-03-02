@@ -1,0 +1,122 @@
+.contact-form {
+  grid-column: center-start / center-end;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    grid-column: full-start / full-end;
+    padding: 0 2rem;
+  }
+
+  &__banner {
+    display: grid;
+    grid-template-rows: repeat(3, 6rem);
+
+    margin-top: 2rem;
+    border-radius: 1rem;
+    background-color: var(--primaryColor);
+
+    @media only screen and (max-width: 576px) {
+      grid-template-rows: repeat(3, 4rem);
+    }
+  }
+
+  &__title {
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+
+    font-size: 3.5rem;
+    color: var(--mainWhite);
+    margin: 0;
+
+    @media only screen and (max-width: 576px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    margin: 5rem 0;
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      margin-top: 3rem;
+    }
+  }
+
+  &__contact-options {
+    display: grid;
+    grid-row-gap: 1.5rem;
+
+    margin: 0;
+    list-style-type: none;
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 5rem;
+      padding: 0;
+    }
+
+    li {
+      border-radius: 1rem;
+      border: .1rem solid var(--mainGrey);
+      padding: 1rem 1.8rem;
+    }
+
+    &--link {
+      display: grid;
+      grid-template-columns: .3fr 1fr;
+
+      border-radius: .5rem;
+      width: inherit;
+      color: var(--darkGrey);
+      cursor: pointer;
+
+      @media only screen and (max-width: 576px) {
+        font-size: 1.6rem;
+      }
+
+      span {
+        align-self: center;
+      }
+    }
+
+    &__icon {
+      height: 3rem;
+      width: 3rem;
+
+      @media only screen and (max-width: 576px) {
+        height: 2.6rem;
+        width: 2.6rem;
+      }
+    }
+  }
+
+
+  &__contact-btn {
+    font-size: 1.9rem;
+    margin-right: auto;
+    border: none;
+    border-radius: .8rem;
+    padding: 1rem 2.2rem;
+    transition: var(--mainTransition);
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+
+    &:hover {
+      background-color: var(--secondaryColor);
+      cursor: pointer;
+    }
+  }
+
+  &__toast-error,
+  &__toast-success {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__notify-message {
+    display: none;
+  }
+}
