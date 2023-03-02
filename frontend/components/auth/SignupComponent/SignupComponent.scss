@@ -1,0 +1,75 @@
+.signup-form {
+  grid-column: center-start / center-end;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 85vh;
+
+  @media only screen and (max-width: 768px) {
+    grid-column: full-start / full-end;
+
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+
+  &__wrapper {
+    @media only screen and (max-width: 575px) {
+      width: 100vw;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    color: var(--primaryColor);
+    text-align: center;
+
+    @media only screen and (max-width: 576px) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__signup-btn {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 0.8rem;
+    width: 100%;
+    padding: 1.2rem 2.2rem;
+    transition: var(--mainTransition);
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+
+    &:hover {
+      background-color: var(--secondaryColor);
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__signin-options {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__messages {
+    display: grid;
+    justify-items: center;
+    margin: 3rem 0;
+    max-width: 40rem;
+  }
+
+  &__toast-success-link {
+    color: var(--mainWhite);
+    transition: var(--mainTransition);
+
+    &:hover {
+      color: var(--mainGrey);
+    }
+  }
+}
