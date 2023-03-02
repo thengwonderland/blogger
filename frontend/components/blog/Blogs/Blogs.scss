@@ -1,0 +1,8 @@
+.blogs {
+  grid-column: center-start / center-end;
+
+  @media only screen and (max-width: 768px) {
+    grid-column: full-start / full-end;
+    margin: 0 2rem;
+  }
+}
