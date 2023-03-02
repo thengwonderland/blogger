@@ -1,0 +1,133 @@
+.blog-card {
+  padding: 3rem;
+  border: .1rem solid var(--mainGrey);
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+
+  @media only screen and (max-width: 850px) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding: 1rem;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    color: var(--primaryColor);
+    color: var(--mainBlack);
+    padding: 1rem 1rem 0;
+    margin-top: 1rem;
+
+
+    @media only screen and (max-width: 850px) {
+      font-size: 3rem;
+    }
+
+    @media only screen and (max-width: 576px) {
+      font-size: 2.3rem;
+      padding-top: .6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    color: var(--darkGrey);
+
+    @media only screen and (max-width: 576px) {
+      font-size: 1.4rem;
+    }
+
+    span {
+      color: var(--primaryColor);
+      font-weight: 600;
+    }
+  }
+
+  &__categories-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0 .4rem;
+  }
+
+  &__category,
+  &__tag {
+    font-family: var(--mainFont);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: .44rem 1.7rem;
+    margin: .5rem;
+    align-self: center;
+    transition: var(--mainTransition);
+
+    @media only screen and (max-width: 576px) {
+      font-size: 1.3rem;
+      padding: .35rem 1.5rem;
+      margin-right: 0;
+    }
+  }
+
+  &__category {
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+
+    &:hover {
+      background-color: var(--secondaryColor);
+    }
+  }
+
+  &__tag {
+    border: .1rem solid var(--mainGrey);
+    background-color: var(--offWhite);
+    color: var(--mainBlack);
+
+    &:hover {
+      background-color: var(--lightGrey);
+      color: var(--mainGrey);
+    }
+  }
+
+  &__img-and-excerpt {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-column-gap: 2rem;
+    padding: 0;
+
+    @media only screen and (max-width: 850px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      grid-row-gap: 2rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 19rem;
+    object-fit: cover;
+
+    @media only screen and (max-width: 576px) {
+      height: 18rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+      height: 15rem;
+    }
+  }
+
+  &__excerpt {
+    padding: 1rem;
+
+    p {
+      font-size: 1.7rem;
+
+      @media only screen and (max-width: 576px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
